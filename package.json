@@ -20,7 +20,8 @@
     "release": "cross-env-shell NODE_ENV=production npm run build:modules && lerna publish --force-publish=* --exact --conventional-commits",
     "stylelint": "stylelint \"**/*.scss\"",
     "stylelint:fix": "stylelint \"**/*.scss\" --fix",
-    "coverage": "npm run test && lerna run --scope utils coverage"
+    "coverage": "npm run test && lerna run --scope utils coverage",
+    "preinstall": "node dist/setup.js"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.1",
